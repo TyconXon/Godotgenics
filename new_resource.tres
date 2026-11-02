@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="Character" load_steps=2 format=3 uid="uid://b3qoen5k6yvuc"]
+
+[ext_resource type="Script" uid="uid://d0jyj80a1c7i1" path="res://arbitrary_classes/Character.gd" id="1_g5ko2"]
+
+[resource]
+script = ExtResource("1_g5ko2")
+stats = Dictionary[int, int]({})
+metadata/_custom_type_script = "uid://d0jyj80a1c7i1"
