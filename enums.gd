@@ -69,8 +69,33 @@ enum Restrictions {none,
 	must_be_conductive,
 	diagonal_only}
 
-enum AOERestrictions {none,
+enum XIs {custom,
+basic_attack_damage,
+max_health,
+is_at_max_mana,
+current_health,
+current_mana,
+cast_count,
+turn_count,
+random_0_to_N,
+alpha_exists,
+current_shield,
+storm_count,
+this_ability_storm_count,
+is_dead,
+enable_if_has_ammo,
+you_are_the_alpha}
 
+enum Comparisons {
+	less_than,
+	less_than_or_equal_to,
+	more_than,
+	more_than_or_equal_to,
+	equal_to,
+	not_at_all,
+}
+
+enum AOERestrictions {none,
 	must_be_empty,
 	must_have_tag,
 	must_have_line_of_sight_unpurgable,

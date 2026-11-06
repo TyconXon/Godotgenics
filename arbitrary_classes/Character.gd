@@ -1,5 +1,5 @@
 class_name Character
-extends CharacterBody2D
+extends Resource
 
 # https://github.com/ombrellus/MewgenicsScriptResources/blob/main/character_formatting.md
 
@@ -7,9 +7,9 @@ extends CharacterBody2D
 @export var stats: Dictionary[Enums.Stats, int] = {Enums.Stats.strength: 5, Enums.Stats.speed:5, Enums.Stats.intelligence:5,Enums.Stats.charisma:5,Enums.Stats.constitution:5,Enums.Stats.dexterity:5,Enums.Stats.luck:5}
 
 @export_group("Visual") 
-@export var display_name: String ##Name of the character
-@export_multiline var tooltip: String ##Tooltip of the character
-@export var graphics: AnimatedSprite2D
+@export var display_name: String; ##Name of the character
+@export_multiline var tooltip: String; ##Tooltip of the character
+@export_file_path var graphics; 
 @export var visual_scale: Vector2:
 	get:
 		return graphics.scale
@@ -53,10 +53,10 @@ var temporary_round_end_bonus_turns = base_round_end_bonus_turns;
 
 
 @export_group("Character abilities")
-@export var move_ability: Resource;
-@export var attack_ability: Resource;
-@export var spells: Array[Resource];
-@export var passives: Array[Resource];
+@export var move_ability: Ability;
+@export var attack_ability: Ability;
+@export var spells: Array[Ability];
+@export var passives: Array[PassiveAbility];
 
 @export_group("AI")
 @export_enum("GenericBrain", "PatternBrain", "PlayerBrain", "NoBrain") var brain = "GenericBrain";

@@ -1,34 +1,10 @@
-[gd_resource type="Resource" script_class="Character" load_steps=2 format=3 uid="uid://b3qoen5k6yvuc"]
+[gd_resource type="Resource" script_class="Ability" format=3 uid="uid://b3qoen5k6yvuc"]
 
-[ext_resource type="Script" uid="uid://d0jyj80a1c7i1" path="res://arbitrary_classes/Character.gd" id="1_g5ko2"]
+[ext_resource type="Script" uid="uid://cmbhrasg1j36r" path="res://arbitrary_classes/Ability.gd" id="1_g5ko2"]
 
 [resource]
+resource_name = "Example"
 script = ExtResource("1_g5ko2")
-stats = Dictionary[int, int]({
-0: 5,
-1: 5,
-2: 5,
-3: 5,
-4: 5,
-5: 5,
-6: 5
-})
-display_name = ""
-tooltip = ""
-visual_scale = Vector2(0, 0)
-tag = Array[String]([])
-movement_stacks = 0
-basic_stacks = 0
-faction = 0
-type = "Cat"
-inherit_faction = false
-inital_health = -1
-base_dispersed_bonus_turns = 0
-base_evenly_dispersed_bonus_turns = 0
-base_round_end_bonus_turns = 0
-flying = false
-tile_size = Vector2i(1, 1)
-inanimate = false
-layer = 0
-shield = 0
+ability_icon = null
+type = null
 metadata/_custom_type_script = "uid://d0jyj80a1c7i1"
