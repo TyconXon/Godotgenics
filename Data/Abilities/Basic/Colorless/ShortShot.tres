@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="Ability" format=3 uid="uid://bgl3bqmtgptbs"]
+
+[ext_resource type="Texture2D" uid="uid://bir7lg0o1pvnh" path="res://Art/Ability/ABILITY_Short_Shot.svg" id="1_jmysf"]
+[ext_resource type="Script" uid="uid://7mvaaw1qcnb0" path="res://Classes/Gon/EffectCallableList.gd" id="1_tjiah"]
+[ext_resource type="Script" uid="uid://cmbhrasg1j36r" path="res://Classes/AbstractTop/Ability.gd" id="2_jmysf"]
+[ext_resource type="Script" uid="uid://d0jyj80a1c7i1" path="res://Classes/AbstractTop/Character.gd" id="3_otp8h"]
+
+[resource]
+resource_name = "Short Shot"
+script = ExtResource("2_jmysf")
+name = "Short Shot"
+description = "Shoot a unit in your line of sight."
+ability_icon = ExtResource("1_jmysf")
+type = "Ranged"
+is_basic_attack = true
+range_mode = "standard"
+minmax_range = Vector2i(1, 3)
+use_projectile = true
+damage_type = null
+first_turn = null
+metadata/_custom_type_script = "uid://cmbhrasg1j36r"

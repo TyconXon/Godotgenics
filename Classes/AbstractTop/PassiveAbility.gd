@@ -8,4 +8,5 @@ extends Resource
 @export var tags: Array[String];
 @export var stats: Dictionary[Enums.Stats,int]
 @export var upgrades_to: PassiveAbility
-@export var passives: Array[Resource]; #Should be gonPassive
+@export var passives: Array[Passive]; #Should be gonPassive
+@export var icon: Texture2D;

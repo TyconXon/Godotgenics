@@ -9,7 +9,7 @@ extends Resource
 @export_group("Visual") 
 @export var display_name: String; ##Name of the character
 @export_multiline var tooltip: String; ##Tooltip of the character
-@export_file_path var graphics; 
+@export var graphics:Texture2D; 
 @export var visual_scale: Vector2:
 	get:
 		return graphics.scale
@@ -19,13 +19,14 @@ extends Resource
 
 
 @export_group("Properties")
-@export var tag: Array[String]
+@export var tag: Array[String];
+@export var items: Dictionary[Enums.ItemSlots, Item];
 @export var movement_stacks: int ##How many times this character can use up its movement ability
 @export var basic_stacks: int ##How many times this character can use up the act slot
 @export var faction: Enums.Factions 
 @export_enum("Small","Cat","Boss","Object") var type = "Cat";
 @export var inherit_faction: bool ##If the character inherits it's faction from the spawner
-@export var inital_health := -1; ##Starting health of the character, if -1, then it'll be max-health
+@export var initial_health := -1; ##Starting health of the character, if -1, then it'll be max-health
 @export var base_dispersed_bonus_turns: int = 0; ##Gives additional X bonus turns to the character during the round
 var temporary_dispersed_bonus_turns = base_dispersed_bonus_turns;
 @export var base_evenly_dispersed_bonus_turns: int = 0; ##Gives additional X bonus turns to the character evenly distributed across the round
@@ -49,14 +50,20 @@ var temporary_round_end_bonus_turns = base_round_end_bonus_turns;
 @export var base_corpse_health:=3;
 @export var is_player_cat:=false;
 @export var can_run:=false;
-
+@export var shield: int = 0 ;
+@export var holy_shield: int = 0;
+@export var dodge_chance: float = 0;
+@export var reach : int = 1;
+@export var range : int = 0;
+@export var aoe : int = 0;
 
 
 @export_group("Character abilities")
 @export var move_ability: Ability;
 @export var attack_ability: Ability;
 @export var spells: Array[Ability];
-@export var passives: Array[PassiveAbility];
+@export var passive_abilities: Array[PassiveAbility];
+@export var passive: Array[Passive];
 
 @export_group("AI")
 @export_enum("GenericBrain", "PatternBrain", "PlayerBrain", "NoBrain") var brain = "GenericBrain";
@@ -64,10 +71,10 @@ var temporary_round_end_bonus_turns = base_round_end_bonus_turns;
 @export var stun_advances_pattern:=true;
 @export var randomize_pattern_start:=true;
 @export var clamp_pattern:=false; ## Should the last action of the pattern loop repeat over and over instead of the pattern looping?
-@export var pattern: Array[Resource];
-@export var mainturn_pattern: Array[Resource];
-@export var bonusturn_pattern: Array[Resource];
-# dynamic variables
+@export var pattern: Array[Ability];
+@export var mainturn_pattern: Array[Ability];
+@export var bonusturn_pattern: Array[Ability];
+# derived variables
 var max_health: int:
 	get:
 		var _d = (volatile_stats[Enums.Stats.constitution] * 4) + flat_max_health;
@@ -95,7 +102,10 @@ var mana_regen: int:
 # in-combat variables
 var volatile_stats := stats;
 var flat_max_health := 0; 
-var health: int;
+var health: int = max_health if initial_health == -1 else initial_health;
 var mana: int = stats[Enums.Stats.charisma];
 var max_mana:int;
-@export var shield: int;
+
+func handle_element(element : Enums.Elements):
+	
+	pass

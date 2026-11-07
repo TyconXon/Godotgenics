@@ -1,10 +1,16 @@
-[gd_resource type="Resource" script_class="Ability" format=3 uid="uid://b3qoen5k6yvuc"]
+[gd_resource type="Resource" script_class="Status" format=3 uid="uid://b3qoen5k6yvuc"]
 
-[ext_resource type="Script" uid="uid://cmbhrasg1j36r" path="res://arbitrary_classes/Ability.gd" id="1_g5ko2"]
+[ext_resource type="Script" uid="uid://cc6g6ef5mb1l0" path="res://Classes/Gon/Passive.gd" id="1_1ivwu"]
+[ext_resource type="Script" uid="uid://7mvaaw1qcnb0" path="res://Classes/Gon/EffectCallableList.gd" id="2_3gp3i"]
+[ext_resource type="Script" uid="uid://blpxc73clxghv" path="res://Classes/Gon/Status.gd" id="2_uauhc"]
+
+[sub_resource type="Resource" id="Resource_tg3de"]
+script = ExtResource("1_1ivwu")
+whatReasonDoIHave = 3
+metadata/_custom_type_script = "uid://cc6g6ef5mb1l0"
 
 [resource]
 resource_name = "Example"
-script = ExtResource("1_g5ko2")
-ability_icon = null
-type = null
+script = ExtResource("2_uauhc")
+passive_effect = SubResource("Resource_tg3de")
 metadata/_custom_type_script = "uid://d0jyj80a1c7i1"

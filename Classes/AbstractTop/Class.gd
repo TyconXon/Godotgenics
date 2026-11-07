@@ -9,7 +9,8 @@ extends Resource
 @export var passive_pool: Array[PassiveAbility];
 @export var stat_mod: Dictionary[Enums.Stats,int];
 @export var levelup_stat_pool: Array[Enums.Stats];
-@export var innate_passives: Array[PassiveAbility]; # Should be gonPassive
+@export var innate_passives: Array[Passive]; # Should be gonPassive
 @export var innate_items: Array[Item];
 @export_group("Graphics")
 @export var palette: Color;
+@export var collar_icon: Texture2D;

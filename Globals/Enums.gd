@@ -69,6 +69,14 @@ enum Restrictions {none,
 	must_be_conductive,
 	diagonal_only}
 
+enum Trigger {
+	BasicAttack, AllDamage, ElementalDamage, Spell, Trample, Melee, ElementalAbility, RecievedDamage,
+	KnockbackDamage, OnWeapon, SpawnedRocks, Familiars, Charmed, AbilityMinions, AllySpendsMana, OnDeath,
+	TurnEnd, StatusRemoved, TurnStart, RoundBegin, RoundEnd, BattleStart, BattleEnd, GainCoins, CollectPickup,
+	FullMana, EndMove, LoseShield, TookHealthDamage, TakeShieldDamage, OnKill, OnPopCorpse, OnDodge,
+	GainedStatus, UseConsumable, AllyDies, OnEveryPassingMovementTile,
+}
+
 enum XIs {custom,
 basic_attack_damage,
 max_health,

@@ -6,27 +6,28 @@ extends Resource
 @export var tags: Array[String];
 @export var chain_ability: Ability;
 
-@export_category("Meta")
-@export_file_path() var ability_icon;
-@export_enum("Movement", "Spawn", "Debuff", "Buff", "Misc", "Unknown", "Heal", "Defense", "Ranged", "Magic") var type;
+@export_group("Meta")
+@export var ability_icon: Texture2D;
+@export_enum("Movement", "Spawn", "Debuff", "Buff", "Misc", "Unknown", "Heal", "Defense", "Ranged", "Magic", "Melee") var type:= "Unknown";
 @export var is_basic_move := false; ##If this ability is the character movement (like the button above the basic attack thing)
 @export var is_basic_attack := false;
 @export var dedicated_class : Class;
+@export var upgraded_version : Ability;
 var damage_display: int;
 
-@export_category("Cost")
+@export_group("Cost")
 @export var movement_points_cost := 0;
 @export var attack_points_cost := 0;
-@export var mana_cost : int;
-@export var infinite_casts: bool;
-@export var only_once_per_turn: bool;
-@export var coin_cost: int;
-@export var once_per_fight: bool;
-@export var must_be_first_action: bool;
-@export var can_be_refreshed: bool;
+@export var mana_cost := 0;
+@export var infinite_casts: bool = false;
+@export var only_once_per_turn: bool = false;
+@export var coin_cost: int = 0;
+@export var once_per_fight: bool = false;
+@export var must_be_first_action: bool = false;
+@export var can_be_refreshed: bool = true;
 var cant_cast: Callable;
 
-@export_category("Target")
+@export_group("Target")
 @export_enum("tile", "direction", "direction8", "random_tile", "random_closest_tile", "random_farthest_tile", "random_direction", "none") var target_mode = "none";
 @export_enum("standard", "square", "water_move", "groud_move", "cross", "8cross", "diagcross", "last_targetted_tile", "map_edges", "special_tagged_tiles", "custom", "none") var range_mode = "none";
 @export_enum("standard", "line", "square", "circle", "perpline", "cross", "diagcross", "8cross", "pierce_cross", "map_edges", "all", "all_except_edges", "all_except_random_empty", "all_except_custom", "narrow_cone", "narrowest_cone", "cone8", "area_around_all_player_cats", "occupied_tiles", "hit_consumer", "custom") var aoe_mode = "standard";
@@ -45,13 +46,14 @@ var cant_cast: Callable;
 @export var target_requires_tag: Array[String];
 @export var target_requires_element: Array[Enums.Elements];
 @export var comparison: Dictionary[Enums.XIs, Enums.Comparisons];
-@export var line_of_site := false;
-@export var only_first : bool;
+@export var line_of_sight := true;
+@export var only_first := false;
 @export var use_projectile := false;
 
-@export_category("Damage Instance")
+@export_group("Damage Instance")
 @export_enum("ranged", "melee", "spell", "status_spell", "spell_cost", "physical_spell", "generic_physical", "knockblock", "spawn", "trample", "none") var damage_type; 
 @export var damage: int;
+#@export var damage_scaler:  Enums.Stats;
 @export var raw_damage: int;
 @export var heal: int;
 @export var knockback: int;
@@ -63,13 +65,13 @@ var cant_cast: Callable;
 @export var force_no_contact := false; ## If the ability forces there to be no contact to the targetted tile
 @export var contact_requires_adjacency := true; ## If the contact requires the character to be adjacent
 @export var force_adjacent_and_diagonal_contact := false; ## If contact is forced even diagonally
-@export var two_way_contact := false; ## If the ability contact counts as contact for the target as well
+@export var two_way_contact := true; ## If the ability contact counts as contact for the target as well
 @export var disallow_modifications := false; ## If the damage/heal of the damage instance isn't allowed to be modified
-@export var layer : Enums.Layers;
+@export var layer : Enums.Layers = Enums.Layers.characters;
 @export var elements : Array[Enums.Elements];
-@export var effects : Array[Resource];
+@export var effects : Array[EffectCallableList];
 
-@export_category("Spawn")
+@export_group("Spawn")
 @export var spawn_object: Array[Character];
 @export var spawn_faction: Enums.Factions;
 @export var clone_items := false;

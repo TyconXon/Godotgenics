@@ -20,7 +20,16 @@ config/icon="res://icon.svg"
 
 [autoload]
 
-Enums="*res://enums.gd"
+Enums="*res://Globals/Enums.gd"
+
+[file_customization]
+
+folder_colors={
+"res://Classes/": "gray",
+"res://Data/": "green",
+"res://Data/Abilities/": "red",
+"res://Data/Classes/": "orange"
+}
 
 [input]
 

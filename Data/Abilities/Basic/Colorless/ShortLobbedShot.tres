@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="Ability" format=3 uid="uid://b8i37tnbtha0l"]
+
+[ext_resource type="Texture2D" uid="uid://b2hoac54takj6" path="res://Art/Ability/ABILITY_Short_Lobbed_Shot.svg" id="1_gmm80"]
+[ext_resource type="Script" uid="uid://7mvaaw1qcnb0" path="res://Classes/Gon/EffectCallableList.gd" id="2_7il8o"]
+[ext_resource type="Script" uid="uid://cmbhrasg1j36r" path="res://Classes/AbstractTop/Ability.gd" id="3_so04a"]
+[ext_resource type="Script" uid="uid://d0jyj80a1c7i1" path="res://Classes/AbstractTop/Character.gd" id="4_1xj5u"]
+
+[resource]
+resource_name = "Short Lobbed Shot"
+script = ExtResource("3_so04a")
+name = "Short Lobbed Shot"
+description = "Lob a shot over units and obstacles."
+ability_icon = ExtResource("1_gmm80")
+type = "Ranged"
+is_basic_attack = true
+range_mode = "standard"
+minmax_range = Vector2i(1, 3)
+use_projectile = true
+damage_type = null
+first_turn = null
+metadata/_custom_type_script = "uid://cmbhrasg1j36r"

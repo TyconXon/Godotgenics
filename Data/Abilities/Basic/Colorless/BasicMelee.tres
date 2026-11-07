@@ -1,0 +1,24 @@
+[gd_resource type="Resource" script_class="Ability" format=3 uid="uid://clkaee0ye5e5m"]
+
+[ext_resource type="Texture2D" uid="uid://cjh1ln3ofhbmj" path="res://Art/Ability/ABILITY_Melee_Attack.svg" id="1_4myox"]
+[ext_resource type="Script" uid="uid://cmbhrasg1j36r" path="res://Classes/AbstractTop/Ability.gd" id="1_r450r"]
+[ext_resource type="Script" uid="uid://7mvaaw1qcnb0" path="res://Classes/Gon/EffectCallableList.gd" id="2_r0b3d"]
+[ext_resource type="Script" uid="uid://d0jyj80a1c7i1" path="res://Classes/AbstractTop/Character.gd" id="2_sbo8t"]
+
+[resource]
+resource_name = "Basic Melee (Colorless)"
+script = ExtResource("1_r450r")
+name = "Melee Attack"
+description = "Attack an adjacent unit."
+ability_icon = ExtResource("1_4myox")
+type = "Melee"
+is_basic_attack = true
+attack_points_cost = 1
+target_mode = "tile"
+range_mode = "cross"
+damage_type = null
+damage = 5
+collects_pickups = true
+makes_contact = true
+first_turn = null
+metadata/_custom_type_script = "uid://cmbhrasg1j36r"
