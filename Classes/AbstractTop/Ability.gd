@@ -1,3 +1,4 @@
+@icon("res://Art/Icon/STATUS_Free_Spell_Icon.svg")
 class_name Ability
 extends Resource
 
@@ -12,7 +13,7 @@ extends Resource
 @export var is_basic_move := false; ##If this ability is the character movement (like the button above the basic attack thing)
 @export var is_basic_attack := false;
 @export var dedicated_class : Class;
-@export var upgraded_version : Ability;
+@export var upgraded_version : Ability; ## This has to be external so you can select it within the inspector
 var damage_display: int;
 
 @export_group("Cost")
@@ -69,7 +70,7 @@ var cant_cast: Callable;
 @export var disallow_modifications := false; ## If the damage/heal of the damage instance isn't allowed to be modified
 @export var layer : Enums.Layers = Enums.Layers.characters;
 @export var elements : Array[Enums.Elements];
-@export var effects : Array[EffectCallableList];
+@export var effects : Array[GDScript];
 
 @export_group("Spawn")
 @export var spawn_object: Array[Character];

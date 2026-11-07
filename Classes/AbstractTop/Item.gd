@@ -1,3 +1,4 @@
+@icon("res://Art/Icon/Rare_Treasure_Node.svg")
 class_name Item
 extends Resource
 
@@ -13,7 +14,7 @@ extends Resource
 @export var fragile := false;
 @export var indestructable := false;
 @export var durability := -1;
-@export var passives: Array[Passive]; #Should be gonPassive
+@export var passives: Passive; #Should be gonPassive
 @export var attack: Ability;
 @export var on_use: Ability;
 
@@ -26,4 +27,4 @@ class ItemSet:
 	@export var shield: int = 0;
 	@export var divine_shield: int = 0;
 	@export var givestat: Dictionary[Enums.Stats,int];
-	@export var passives: Array[Passive]; #Should be gonPassive
+	@export var passives: Passive; #Should be gonPassive

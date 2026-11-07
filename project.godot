@@ -15,12 +15,14 @@ compatibility/default_parent_skeleton_in_mesh_instance_3d=true
 [application]
 
 config/name="Godotgenics (Again)"
+run/main_scene="uid://bllk3n1hjxwn0"
 config/features=PackedStringArray("4.7", "Forward Plus")
 config/icon="res://icon.svg"
 
 [autoload]
 
 Enums="*res://Globals/Enums.gd"
+Global="*uid://bw58e3ifq5ttc"
 
 [file_customization]
 
@@ -28,7 +30,8 @@ folder_colors={
 "res://Classes/": "gray",
 "res://Data/": "green",
 "res://Data/Abilities/": "red",
-"res://Data/Classes/": "orange"
+"res://Data/Classes/": "orange",
+"res://Scenes/": "red"
 }
 
 [input]

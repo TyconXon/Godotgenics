@@ -7,6 +7,7 @@ enum passive_reason{
 }
 
 @export var whatReasonDoIHave : passive_reason;
-	
+@export var stat_modifiers : Dictionary[Enums.Stats, int]
+
 @export var whatDoIDoWhen: Dictionary[Enums.Trigger,EffectCallableList];
 @export var whatIDoWhenOthersDo: Dictionary[Enums.Trigger, EffectCallableList];

@@ -2,16 +2,23 @@
 
 [ext_resource type="Script" uid="uid://cmbhrasg1j36r" path="res://Classes/AbstractTop/Ability.gd" id="1_8paf4"]
 [ext_resource type="Resource" uid="uid://clkaee0ye5e5m" path="res://Data/Abilities/Basic/Colorless/BasicMelee.tres" id="2_33yvq"]
+[ext_resource type="Resource" uid="uid://ct6e3ogx4vdq1" path="res://Data/Abilities/Spells/Colorless/Spit.tres" id="2_ir3i5"]
 [ext_resource type="Resource" uid="uid://bgl3bqmtgptbs" path="res://Data/Abilities/Basic/Colorless/ShortShot.tres" id="3_gqdwk"]
 [ext_resource type="Script" uid="uid://b6dq56isxdv1a" path="res://Classes/AbstractTop/Item.gd" id="3_nvyt4"]
-[ext_resource type="Script" uid="uid://cc6g6ef5mb1l0" path="res://Classes/Gon/Passive.gd" id="4_gqdwk"]
 [ext_resource type="Resource" uid="uid://b8i37tnbtha0l" path="res://Data/Abilities/Basic/Colorless/ShortLobbedShot.tres" id="4_ir3i5"]
+[ext_resource type="Texture2D" uid="uid://cr4qtncjk2sxs" path="res://Art/Class/Collarless_Icon.svg" id="5_gqdwk"]
 [ext_resource type="Script" uid="uid://igr5mococ1f" path="res://Classes/AbstractTop/PassiveAbility.gd" id="5_ir3i5"]
 [ext_resource type="Script" uid="uid://s7gr7yaj84b0" path="res://Classes/AbstractTop/Class.gd" id="6_gaqy5"]
+[ext_resource type="Resource" uid="uid://0ihyq1s6k7y3" path="res://Data/Abilities/Passive/Colorless/ETank.tres" id="8_ir3i5"]
 
 [resource]
 script = ExtResource("6_gaqy5")
 name = "Colorless"
 description = "It's a cat!"
 attack_pool = Array[ExtResource("1_8paf4")]([ExtResource("2_33yvq"), ExtResource("3_gqdwk"), ExtResource("4_ir3i5")])
+ability_pool = Array[ExtResource("1_8paf4")]([ExtResource("2_ir3i5")])
+passive_pool = Array[ExtResource("5_ir3i5")]([ExtResource("8_ir3i5")])
+levelup_stat_pool = Array[int]([0, 1, 2, 3, 4, 5, 6])
+palette = Color(1, 1, 1, 1)
+collar_icon = ExtResource("5_gqdwk")
 metadata/_custom_type_script = "uid://s7gr7yaj84b0"

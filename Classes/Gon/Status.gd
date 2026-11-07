@@ -1,3 +1,4 @@
+@icon("res://Art/Icon/STATUS_Stun_Icon.svg")
 class_name Status
 extends Resource
 

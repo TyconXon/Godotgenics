@@ -1,6 +1,5 @@
 [gd_resource type="Resource" script_class="Ability" format=3 uid="uid://ct6e3ogx4vdq1"]
 
-[ext_resource type="Script" uid="uid://7mvaaw1qcnb0" path="res://Classes/Gon/EffectCallableList.gd" id="1_0deef"]
 [ext_resource type="Texture2D" uid="uid://qau338rk4qai" path="res://Art/Ability/ABILITY_Spit.svg" id="1_tgr2h"]
 [ext_resource type="Script" uid="uid://cmbhrasg1j36r" path="res://Classes/AbstractTop/Ability.gd" id="2_tgr2h"]
 [ext_resource type="Script" uid="uid://d0jyj80a1c7i1" path="res://Classes/AbstractTop/Character.gd" id="3_kbe8r"]

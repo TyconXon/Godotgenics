@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://bllk3n1hjxwn0"]
+
+[ext_resource type="Script" uid="uid://cyvfluukufnya" path="res://Scenes/title_screen.gd" id="1_uebgo"]
+
+[node name="TitleScreen" type="Control" unique_id=1749617914]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_uebgo")
+
+[node name="Label" type="Label" parent="." unique_id=1926450150]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 171.00005
+offset_top = 39.0
+offset_right = 270.00006
+offset_bottom = 62.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(7.015464, 7.120491)
+text = "GodotGenics"
+
+[node name="Button" type="Button" parent="." unique_id=1710733663]
+layout_mode = 0
+offset_left = 189.0
+offset_top = 212.0
+offset_right = 320.62848
+offset_bottom = 257.65637
+text = "Play I guess"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

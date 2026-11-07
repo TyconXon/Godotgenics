@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://3h3em00t66xb"]
+
+[ext_resource type="Script" uid="uid://irv0stcj75mb" path="res://Scenes/adventure_map.gd" id="1_7gqwe"]
+
+[node name="AdventureMap" type="Node2D" unique_id=393035884]
+script = ExtResource("1_7gqwe")
+
+[node name="Label" type="Label" parent="." unique_id=1768535366]
+offset_left = 85.0
+offset_top = 52.0
+offset_right = 125.0
+offset_bottom = 75.0
+text = "BlahBlahBlag"

@@ -1,3 +1,4 @@
+@icon("res://Art/Icon/Fighter_Mini_Icon.svg")
 class_name Character
 extends Resource
 
@@ -20,9 +21,9 @@ extends Resource
 
 @export_group("Properties")
 @export var tag: Array[String];
-@export var items: Dictionary[Enums.ItemSlots, Item];
-@export var movement_stacks: int ##How many times this character can use up its movement ability
-@export var basic_stacks: int ##How many times this character can use up the act slot
+@export var equipped_items: Dictionary[Enums.ItemSlots, Item];
+@export var movement_stacks: int = 1 ##How many times this character can use up its movement ability
+@export var basic_stacks: int = 1 ##How many times this character can use up the act slot
 @export var faction: Enums.Factions 
 @export_enum("Small","Cat","Boss","Object") var type = "Cat";
 @export var inherit_faction: bool ##If the character inherits it's faction from the spawner
@@ -59,7 +60,7 @@ var temporary_round_end_bonus_turns = base_round_end_bonus_turns;
 
 
 @export_group("Character abilities")
-@export var move_ability: Ability;
+@export var move_ability: Ability; ## If none, default
 @export var attack_ability: Ability;
 @export var spells: Array[Ability];
 @export var passive_abilities: Array[PassiveAbility];
