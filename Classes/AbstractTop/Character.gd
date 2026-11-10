@@ -25,6 +25,7 @@ extends Resource
 @export var movement_stacks: int = 1 ##How many times this character can use up its movement ability
 @export var basic_stacks: int = 1 ##How many times this character can use up the act slot
 @export var faction: Enums.Factions 
+@export var player_owner : int = 0; ## Which player does this count for as an ally?
 @export_enum("Small","Cat","Boss","Object") var type = "Cat";
 @export var inherit_faction: bool ##If the character inherits it's faction from the spawner
 @export var initial_health := -1; ##Starting health of the character, if -1, then it'll be max-health
@@ -57,7 +58,7 @@ var temporary_round_end_bonus_turns = base_round_end_bonus_turns;
 @export var reach : int = 1;
 @export var range : int = 0;
 @export var aoe : int = 0;
-
+@export var current_statuses : Array[Status]
 
 @export_group("Character abilities")
 @export var move_ability: Ability; ## If none, default
@@ -108,5 +109,27 @@ var mana: int = stats[Enums.Stats.charisma];
 var max_mana:int;
 
 func handle_element(element : Enums.Elements):
-	
+	#  I drafted this signature while thinking about how the game should
+	# handle ice attacks freezing wet characters, persistent elements, etc
 	pass
+
+func all_passives() -> Array[Passive]:
+	var _culmination : Array[Passive] = [];
+	# Sources: Status effects, passive abilities, mutations, items, and class inheritance
+	
+	for status in current_statuses: 				# Status effects
+		_culmination.append(status.passive_effect);
+	for ability in passive_abilities:				# Passive abilities
+		_culmination.append(ability.passive);
+	if self is PlayerCat: 							# Mutations
+		for mut in (self as PlayerCat).mutations:
+			_culmination.append(mut.passive);
+		_culmination.append((self as PlayerCat).collar.innate_passive);
+	for item in equipped_items:						# Items
+		_culmination.append(equipped_items[item].passive);
+	for i in passive: 								# Character specific
+		_culmination.append(i);
+	
+		
+	
+	return _culmination;

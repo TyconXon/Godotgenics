@@ -17,6 +17,6 @@ func _on_button_pressed() -> void:
 	var onlycat = load("res://Data/Testing/Ness.tres");
 	curplayer.adventure_mainteam.append(onlycat)
 	curgame.players.append(curplayer)
-	Global.currentGame = curgame
+	Global.current_game = curgame
 	get_tree().change_scene_to_file("res://Scenes/AdventureMap.tscn")
 	pass

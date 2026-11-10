@@ -14,7 +14,7 @@ extends Resource
 @export var fragile := false;
 @export var indestructable := false;
 @export var durability := -1;
-@export var passives: Passive; #Should be gonPassive
+@export var passive: Passive; #Should be gonPassive
 @export var attack: Ability;
 @export var on_use: Ability;
 

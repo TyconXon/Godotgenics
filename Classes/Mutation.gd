@@ -4,3 +4,4 @@ extends Passive
 
 @export var name : String;
 @export var description : String;
+@export var passive : Passive;

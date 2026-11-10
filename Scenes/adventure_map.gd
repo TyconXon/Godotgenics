@@ -8,5 +8,5 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	$Label.text = Global.currentGame.players[0].adventure_mainteam[0].display_name + " " + str(Global.currentGame.players[0].adventure_mainteam[0].stats)
+	$Label.text = Global.teamcats(0)[0].display_name + " " + str(Global.teamcats(0)[0].stats)
 	pass

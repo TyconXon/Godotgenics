@@ -9,5 +9,5 @@ extends Resource
 @export var tags: Array[String];
 #@export var stats: Dictionary[Enums.Stats,int]
 @export var upgraded_version: PassiveAbility ## This has to be external so you can select it within the inspector
-@export var passives: Passive; #Should be gonPassive
+@export var passive: Passive; #Should be gonPassive
 @export var icon: Texture2D;
