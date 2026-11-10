@@ -129,7 +129,5 @@ func all_passives() -> Array[Passive]:
 		_culmination.append(equipped_items[item].passive);
 	for i in passive: 								# Character specific
 		_culmination.append(i);
-	
-		
-	
+
 	return _culmination;

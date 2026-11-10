@@ -251,3 +251,21 @@ enum Weather {None,
 	Wildfire,
 	Windy
 }
+
+enum MapNodeTypes {
+	Combat,
+	Boss,
+	Miniboss,
+	
+	Treasure,
+	SpecialTreasure,
+	
+	GeneralEvent,
+	SpecialEvent,
+	
+	GeneralShop,
+	SpecialShop,
+	
+	Food,
+	Coins,
+}
