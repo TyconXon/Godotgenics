@@ -253,6 +253,7 @@ enum Weather {None,
 }
 
 enum MapNodeTypes {
+	
 	Combat,
 	Boss,
 	Miniboss,
@@ -268,4 +269,6 @@ enum MapNodeTypes {
 	
 	Food,
 	Coins,
+	
+	Icon,
 }

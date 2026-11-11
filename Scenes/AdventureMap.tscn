@@ -1,9 +1,153 @@
 [gd_scene format=3 uid="uid://3h3em00t66xb"]
 
 [ext_resource type="Script" uid="uid://irv0stcj75mb" path="res://Scenes/adventure_map.gd" id="1_7gqwe"]
+[ext_resource type="Script" uid="uid://bibiplg3m3bbt" path="res://Classes/AbstractTop/MapNode.gd" id="2_3gj36"]
+[ext_resource type="Script" uid="uid://ds3lmfmigsx2g" path="res://Classes/AbstractTop/MapLayout.gd" id="2_8w25c"]
+[ext_resource type="Script" uid="uid://vvtdi46kg4n8" path="res://Classes/Helper/PathSegment.gd" id="3_pgohg"]
+
+[sub_resource type="Resource" id="Resource_pgohg"]
+script = ExtResource("2_3gj36")
+metadata/_custom_type_script = "uid://bibiplg3m3bbt"
+
+[sub_resource type="Resource" id="Resource_qvs3g"]
+script = ExtResource("2_3gj36")
+type = 5
+metadata/_custom_type_script = "uid://bibiplg3m3bbt"
+
+[sub_resource type="Resource" id="Resource_hslsl"]
+script = ExtResource("2_3gj36")
+metadata/_custom_type_script = "uid://bibiplg3m3bbt"
+
+[sub_resource type="Resource" id="Resource_mmnvi"]
+script = ExtResource("2_3gj36")
+type = 3
+metadata/_custom_type_script = "uid://bibiplg3m3bbt"
+
+[sub_resource type="Resource" id="Resource_m787r"]
+script = ExtResource("2_3gj36")
+type = 5
+metadata/_custom_type_script = "uid://bibiplg3m3bbt"
+
+[sub_resource type="Resource" id="Resource_b5g5d"]
+script = ExtResource("2_3gj36")
+type = 2
+metadata/_custom_type_script = "uid://bibiplg3m3bbt"
+
+[sub_resource type="Curve2D" id="Curve2D_tg3de"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 15, 88, 0, 0, 0, 0, 70, 89, 0, 0, 0, 0, 119, 79, 0, 0, 0, 0, 180, 93, 0, 0, 0, 0, 212, 48, 0, 0, 0, 0, 245, 90, 0, 0, 0, 0, 292, 89)
+}
+point_count = 7
+script = ExtResource("3_pgohg")
+node_definitions = Dictionary[int, ExtResource("2_3gj36")]({
+1: SubResource("Resource_pgohg"),
+2: SubResource("Resource_qvs3g"),
+3: SubResource("Resource_hslsl"),
+4: SubResource("Resource_mmnvi"),
+5: SubResource("Resource_m787r"),
+6: SubResource("Resource_b5g5d")
+})
+redirect_branches = Array[int]([1, 2])
+metadata/_custom_type_script = "uid://vvtdi46kg4n8"
+
+[sub_resource type="Resource" id="Resource_3gj36"]
+script = ExtResource("2_3gj36")
+type = 5
+metadata/_custom_type_script = "uid://bibiplg3m3bbt"
+
+[sub_resource type="Resource" id="Resource_agito"]
+script = ExtResource("2_3gj36")
+metadata/_custom_type_script = "uid://bibiplg3m3bbt"
+
+[sub_resource type="Resource" id="Resource_nx4pr"]
+script = ExtResource("2_3gj36")
+type = 5
+metadata/_custom_type_script = "uid://bibiplg3m3bbt"
+
+[sub_resource type="Resource" id="Resource_34b5w"]
+script = ExtResource("2_3gj36")
+type = 3
+metadata/_custom_type_script = "uid://bibiplg3m3bbt"
+
+[sub_resource type="Resource" id="Resource_2hmht"]
+script = ExtResource("2_3gj36")
+type = 7
+metadata/_custom_type_script = "uid://bibiplg3m3bbt"
+
+[sub_resource type="Curve2D" id="Curve2D_m2ctd"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 291, 89, 0, 0, 0, 0, 381, 54, 0, 0, 0, 0, 432, 89, 0, 0, 0, 0, 465, 90, 0, 0, 0, 0, 501, 103, 0, 0, 0, 0, 500, 144)
+}
+point_count = 6
+script = ExtResource("3_pgohg")
+node_definitions = Dictionary[int, ExtResource("2_3gj36")]({
+1: SubResource("Resource_3gj36"),
+2: SubResource("Resource_agito"),
+3: SubResource("Resource_nx4pr"),
+4: SubResource("Resource_34b5w"),
+5: SubResource("Resource_2hmht")
+})
+redirect_branches = Array[int]([3])
+metadata/_custom_type_script = "uid://vvtdi46kg4n8"
+
+[sub_resource type="Curve2D" id="Curve2D_utmpi"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 291, 89, 0, 0, 0, 0, 302, 122, 0, 0, 0, 0, 271, 161, 0, 0, 0, 0, 339, 170, 0, 0, 0, 0, 382, 193, 0, 0, 0, 0, 434, 188, 0, 0, 0, 0, 470, 190, 0, 0, 0, 0, 499, 150)
+}
+point_count = 8
+script = ExtResource("3_pgohg")
+redirect_branches = Array[int]([3])
+metadata/_custom_type_script = "uid://vvtdi46kg4n8"
+
+[sub_resource type="Curve2D" id="Curve2D_xutu1"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 500, 147, 0, 0, 0, 0, 525, 146)
+}
+point_count = 2
+script = ExtResource("3_pgohg")
+metadata/_custom_type_script = "uid://vvtdi46kg4n8"
+
+[sub_resource type="Curve2D" id="Curve2D_cc0d2"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 526, 146, 0, 0, 0, 0, 526, 132)
+}
+point_count = 2
+script = ExtResource("3_pgohg")
+metadata/_custom_type_script = "uid://vvtdi46kg4n8"
+
+[sub_resource type="Curve2D" id="Curve2D_pflhh"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 525, 147, 0, 0, 0, 0, 526, 162)
+}
+point_count = 2
+script = ExtResource("3_pgohg")
+metadata/_custom_type_script = "uid://vvtdi46kg4n8"
+
+[sub_resource type="Curve2D" id="Curve2D_8fyu5"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 526, 147, 0, 0, 0, 0, 546, 146)
+}
+point_count = 2
+script = ExtResource("3_pgohg")
+metadata/_custom_type_script = "uid://vvtdi46kg4n8"
+
+[sub_resource type="Resource" id="Resource_7gqwe"]
+script = ExtResource("2_8w25c")
+name = "Alley"
+pathing = Dictionary[int, ExtResource("3_pgohg")]({
+0: SubResource("Curve2D_tg3de"),
+1: SubResource("Curve2D_m2ctd"),
+2: SubResource("Curve2D_utmpi"),
+3: SubResource("Curve2D_xutu1"),
+4: SubResource("Curve2D_cc0d2"),
+5: SubResource("Curve2D_pflhh"),
+6: SubResource("Curve2D_8fyu5")
+})
+metadata/_custom_type_script = "uid://ds3lmfmigsx2g"
 
 [node name="AdventureMap" type="Node2D" unique_id=393035884]
 script = ExtResource("1_7gqwe")
+current_map = SubResource("Resource_7gqwe")
 
 [node name="Label" type="Label" parent="." unique_id=1768535366]
 offset_left = 85.0
