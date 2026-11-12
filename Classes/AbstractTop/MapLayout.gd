@@ -12,3 +12,5 @@ class_name MapLayout extends Resource
 @export_storage var _CHOSEN_MINIBOSS : Resource
 
 @export var pathing : Dictionary[int, PathSegment]
+@export var endings : Array[MapLayout]
+@export var endings_can_go_home := true

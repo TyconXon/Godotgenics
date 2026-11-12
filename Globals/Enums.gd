@@ -271,4 +271,5 @@ enum MapNodeTypes {
 	Coins,
 	
 	Icon,
+	HardCombat
 }
