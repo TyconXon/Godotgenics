@@ -5,6 +5,7 @@
 [ext_resource type="Resource" uid="uid://bik0etxgjyukk" path="res://Data/Classes/Colorless.tres" id="2_rbo7b"]
 [ext_resource type="Texture2D" uid="uid://samqidq4fbp5" path="res://icon.svg" id="3_rbo7b"]
 [ext_resource type="Script" uid="uid://b6dq56isxdv1a" path="res://Classes/AbstractTop/Item.gd" id="3_ya7do"]
+[ext_resource type="Script" uid="uid://blpxc73clxghv" path="res://Classes/Gon/Status.gd" id="4_uvu3a"]
 [ext_resource type="Script" uid="uid://du84n0v00plm6" path="res://Classes/Mutation.gd" id="4_waywg"]
 [ext_resource type="Script" uid="uid://cc6g6ef5mb1l0" path="res://Classes/Gon/Passive.gd" id="5_67kj2"]
 [ext_resource type="Script" uid="uid://igr5mococ1f" path="res://Classes/AbstractTop/PassiveAbility.gd" id="6_uvu3a"]
@@ -12,7 +13,7 @@
 [ext_resource type="Resource" uid="uid://0ihyq1s6k7y3" path="res://Data/Abilities/Passive/Colorless/ETank.tres" id="9_uvu3a"]
 [ext_resource type="Resource" uid="uid://ct6e3ogx4vdq1" path="res://Data/Abilities/Spells/Colorless/Spit.tres" id="11_x8hkq"]
 
-[sub_resource type="GDScript" id="GDScript_puegh"]
+[sub_resource type="GDScript" id="GDScript_x8hkq"]
 
 [resource]
 script = ExtResource("7_x8hkq")
@@ -27,7 +28,7 @@ stats = Dictionary[int, int]({
 5: 6,
 6: 5
 })
-display_name = "Ness"
+name = "Ness"
 graphics = ExtResource("3_rbo7b")
 is_player_cat = true
 attack_ability = ExtResource("1_67kj2")

@@ -1,0 +1,29 @@
+[gd_resource type="Resource" script_class="PassiveAbility" format=3 uid="uid://b5iw4a2n261po"]
+
+[ext_resource type="Texture2D" uid="uid://fgwngj4urv6c" path="res://Art/Ability/ABILITY_E-Tank.svg" id="1_ar566"]
+[ext_resource type="Script" uid="uid://cc6g6ef5mb1l0" path="res://Classes/Gon/Passive.gd" id="2_dodhe"]
+[ext_resource type="Script" uid="uid://7mvaaw1qcnb0" path="res://Classes/Gon/EffectCallableList.gd" id="3_auwth"]
+[ext_resource type="Script" uid="uid://igr5mococ1f" path="res://Classes/AbstractTop/PassiveAbility.gd" id="4_avso7"]
+[ext_resource type="Script" uid="uid://jnef77frv26n" path="res://Data/Abilities/Passive/Colorless/ETank+.gd" id="4_dodhe"]
+
+[sub_resource type="Resource" id="Resource_dodhe"]
+script = ExtResource("3_auwth")
+actions = Array[int]([6])
+callables = Array[GDScript]([ExtResource("4_dodhe")])
+metadata/_custom_type_script = "uid://7mvaaw1qcnb0"
+
+[sub_resource type="Resource" id="Resource_wsqhp"]
+script = ExtResource("2_dodhe")
+whatDoIDoWhen = Dictionary[int, ExtResource("3_auwth")]({
+21: SubResource("Resource_dodhe")
+})
+metadata/_custom_type_script = "uid://cc6g6ef5mb1l0"
+
+[resource]
+resource_name = "E-Tank+"
+script = ExtResource("4_avso7")
+name = "E-Tank+"
+description = "Start each battle with +50 unfilled max health."
+passive = SubResource("Resource_wsqhp")
+icon = ExtResource("1_ar566")
+metadata/_custom_type_script = "uid://igr5mococ1f"

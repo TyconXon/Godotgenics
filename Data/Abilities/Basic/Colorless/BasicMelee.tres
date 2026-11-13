@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://cjh1ln3ofhbmj" path="res://Art/Ability/ABILITY_Melee_Attack.svg" id="1_4myox"]
 [ext_resource type="Script" uid="uid://cmbhrasg1j36r" path="res://Classes/AbstractTop/Ability.gd" id="1_r450r"]
 [ext_resource type="Script" uid="uid://7mvaaw1qcnb0" path="res://Classes/Gon/EffectCallableList.gd" id="2_r0b3d"]
-[ext_resource type="Script" uid="uid://d0jyj80a1c7i1" path="res://Classes/AbstractTop/Character.gd" id="2_sbo8t"]
+[ext_resource type="Script" uid="uid://d0jyj80a1c7i1" path="res://Classes/AbstractTop/Units/Character.gd" id="2_sbo8t"]
 
 [resource]
 resource_name = "Basic Melee (Colorless)"

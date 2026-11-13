@@ -15,6 +15,3 @@ extends Resource
 @export_group("Graphics")
 @export var palette: Color;
 @export var collar_icon: Texture2D;
-
-func _validate_property(property: Dictionary) -> void:
-	resource_name = name;

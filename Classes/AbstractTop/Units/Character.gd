@@ -1,21 +1,24 @@
 @icon("res://Art/Icon/Fighter_Mini_Icon.svg")
 class_name Character
-extends Resource
+extends Unit
 
 # https://github.com/ombrellus/MewgenicsScriptResources/blob/main/character_formatting.md
+
+signal perform_trigger(which : Enums.Trigger, context : EffectCallable.EffectContext)
 
 @export var variant_of: Character
 @export var stats: Dictionary[Enums.Stats, int] = {Enums.Stats.strength: 5, Enums.Stats.speed:5, Enums.Stats.intelligence:5,Enums.Stats.charisma:5,Enums.Stats.constitution:5,Enums.Stats.dexterity:5,Enums.Stats.luck:5}
 
 @export_group("Visual") 
-@export var display_name: String; ##Name of the character
-@export_multiline var tooltip: String; ##Tooltip of the character
-@export var graphics:Texture2D; 
-@export var visual_scale: Vector2:
+#@export var name: String; ##Name of the character
+var display_name : String : 
 	get:
-		return graphics.scale
+		return name;
 	set(value):
-		graphics.scale = value
+		name = value;
+#@export_multiline var description: String; ##Tooltip of the character
+#@export var graphics:Texture2D; 
+#@export var visual_scale := Vector2.ONE;
 
 
 
@@ -36,9 +39,7 @@ var temporary_evenly_dispersed_bonus_turns = base_evenly_dispersed_bonus_turns;
 @export var base_round_end_bonus_turns: int = 0; ##Gives additional X bonus turns to the character at the end of the round
 var temporary_round_end_bonus_turns = base_round_end_bonus_turns;
 @export var flying:=false;
-@export var tile_size:Vector2i = Vector2i(1,1);
 @export var inanimate:=false;
-@export var layer: Enums.Layers;
 @export var knockback_immune:=false;
 @export var can_be_backstabbed:=true;
 @export var kill_required:=false;
@@ -50,7 +51,7 @@ var temporary_round_end_bonus_turns = base_round_end_bonus_turns;
 @export var can_collect_coins:=false;
 @export var can_eat_food:=false;
 @export var base_corpse_health:=3;
-@export var is_player_cat:=false;
+@export var player_controlled:=false;
 @export var can_run:=false;
 @export var shield: int = 0 ;
 @export var holy_shield: int = 0;
@@ -76,10 +77,13 @@ var temporary_round_end_bonus_turns = base_round_end_bonus_turns;
 @export var pattern: Array[Ability];
 @export var mainturn_pattern: Array[Ability];
 @export var bonusturn_pattern: Array[Ability];
+
+
+
 # derived variables
 var max_health: int:
 	get:
-		var _d = (volatile_stats[Enums.Stats.constitution] * 4) + flat_max_health;
+		var _d = (volatile_stats(Enums.Stats.constitution) * 4) + flat_max_health;
 		if(_d <= 0 and shield == 0): return 1;
 		return _d;
 	set(value):
@@ -89,10 +93,10 @@ var movement: int; #Todo: make this dynamic
 var base_movement: int;
 var base_max_mana: int: 
 	get:
-		return maxi(volatile_stats[Enums.stats.charisma]*3,0);
+		return maxi(volatile_stats(Enums.Stats.charisma)*3,0);
 var base_mana_regen: int:
 	get:
-		return maxi(volatile_stats[Enums.stats.intelligence], 0);
+		return maxi(volatile_stats(Enums.Stats.intelligence), 0);
 var flat_mana_regen: int;
 var mana_regen: int:
 	get:
@@ -100,13 +104,24 @@ var mana_regen: int:
 	set(value):
 		var _c = value - base_mana_regen;
 		flat_mana_regen += _c;
+		
+@export var base_initiative := 1;
+var initiative : int : 
+	get: return attributes.get_attribute("initiative",base_initiative) + (volatile_stats(Enums.Stats.speed) * 2) ;
 	
 # in-combat variables
-var volatile_stats := stats;
+var attributes := ModifiersSystem.new();
+
+func volatile_stats(a:Enums.Stats) -> int :
+	return attributes.get_attribute(Enums.Stats.find_key(a),stats[a]);
+	
 var flat_max_health := 0; 
 var health: int = max_health if initial_health == -1 else initial_health;
 var mana: int = stats[Enums.Stats.charisma];
 var max_mana:int;
+
+
+
 
 func handle_element(element : Enums.Elements):
 	#  I drafted this signature while thinking about how the game should
@@ -131,3 +146,9 @@ func all_passives() -> Array[Passive]:
 		_culmination.append(i);
 
 	return _culmination;
+
+func recieve_trigger(which: Enums.Trigger, context: EffectCallable.EffectContext):
+	var all_of_my_passives := all_passives();
+	for passive : Passive in all_of_my_passives:
+		passive.recieve_trigger(which, context)
+	pass

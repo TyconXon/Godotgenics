@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://bir7lg0o1pvnh" path="res://Art/Ability/ABILITY_Short_Shot.svg" id="1_jmysf"]
 [ext_resource type="Script" uid="uid://7mvaaw1qcnb0" path="res://Classes/Gon/EffectCallableList.gd" id="1_tjiah"]
 [ext_resource type="Script" uid="uid://cmbhrasg1j36r" path="res://Classes/AbstractTop/Ability.gd" id="2_jmysf"]
-[ext_resource type="Script" uid="uid://d0jyj80a1c7i1" path="res://Classes/AbstractTop/Character.gd" id="3_otp8h"]
+[ext_resource type="Script" uid="uid://d0jyj80a1c7i1" path="res://Classes/AbstractTop/Units/Character.gd" id="3_otp8h"]
 
 [resource]
 resource_name = "Short Shot"

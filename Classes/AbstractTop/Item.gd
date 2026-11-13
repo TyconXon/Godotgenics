@@ -17,7 +17,8 @@ extends Resource
 @export var passive: Passive; #Should be gonPassive
 @export var attack: Ability;
 @export var on_use: Ability;
-
+@export var one_use_per_turn := true;
+var exhausted_uses := false;
 
 class ItemSet:
 	extends Resource;

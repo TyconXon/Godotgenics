@@ -273,3 +273,11 @@ enum MapNodeTypes {
 	Icon,
 	HardCombat
 }
+
+enum CommonTokens {
+	Coins,
+	Health,
+	Shield,
+	HolyShield,
+	Mana,
+}

@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://b2hoac54takj6" path="res://Art/Ability/ABILITY_Short_Lobbed_Shot.svg" id="1_gmm80"]
 [ext_resource type="Script" uid="uid://7mvaaw1qcnb0" path="res://Classes/Gon/EffectCallableList.gd" id="2_7il8o"]
 [ext_resource type="Script" uid="uid://cmbhrasg1j36r" path="res://Classes/AbstractTop/Ability.gd" id="3_so04a"]
-[ext_resource type="Script" uid="uid://d0jyj80a1c7i1" path="res://Classes/AbstractTop/Character.gd" id="4_1xj5u"]
+[ext_resource type="Script" uid="uid://d0jyj80a1c7i1" path="res://Classes/AbstractTop/Units/Character.gd" id="4_1xj5u"]
 
 [resource]
 resource_name = "Short Lobbed Shot"

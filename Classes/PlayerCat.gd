@@ -7,7 +7,7 @@ extends Character
 class Injury:
 	extends Resource;
 	@export var name: String;
-	@export var icon: Image;
+	@export var icon: Texture2D;
 	@export var affects: Dictionary[Enums.Stats, int];
 @export var injuries: Array[Injury];
 @export var mutations: Array[Mutation];

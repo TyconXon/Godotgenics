@@ -5,17 +5,18 @@
 [ext_resource type="Script" uid="uid://igr5mococ1f" path="res://Classes/AbstractTop/PassiveAbility.gd" id="2_0jhwb"]
 [ext_resource type="Script" uid="uid://7mvaaw1qcnb0" path="res://Classes/Gon/EffectCallableList.gd" id="3_ea00r"]
 [ext_resource type="Script" uid="uid://c4ve1x4rlkwr5" path="res://Data/Abilities/Passive/Colorless/ETank.gd" id="4_ea00r"]
+[ext_resource type="Resource" uid="uid://b5iw4a2n261po" path="res://Data/Abilities/Passive/Colorless/ETank+.tres" id="5_ea00r"]
 
-[sub_resource type="Resource" id="Resource_xmhur"]
+[sub_resource type="Resource" id="Resource_ar566"]
 script = ExtResource("3_ea00r")
 actions = Array[int]([6])
 callables = Array[GDScript]([ExtResource("4_ea00r")])
 metadata/_custom_type_script = "uid://7mvaaw1qcnb0"
 
-[sub_resource type="Resource" id="Resource_3h7up"]
+[sub_resource type="Resource" id="Resource_wsqhp"]
 script = ExtResource("1_om133")
 whatDoIDoWhen = Dictionary[int, ExtResource("3_ea00r")]({
-21: SubResource("Resource_xmhur")
+21: SubResource("Resource_ar566")
 })
 metadata/_custom_type_script = "uid://cc6g6ef5mb1l0"
 
@@ -24,6 +25,7 @@ resource_name = "E-Tank"
 script = ExtResource("2_0jhwb")
 name = "E-Tank"
 description = "Start each battle with +20 unfilled max health."
-passives = SubResource("Resource_3h7up")
+upgraded_version = ExtResource("5_ea00r")
+passive = SubResource("Resource_wsqhp")
 icon = ExtResource("1_es8bk")
 metadata/_custom_type_script = "uid://igr5mococ1f"
