@@ -24,13 +24,20 @@ config/icon="res://icon.svg"
 Enums="*res://Globals/Enums.gd"
 Global="*uid://bw58e3ifq5ttc"
 
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/yard/plugin.cfg")
+
 [file_customization]
 
 folder_colors={
+"res://Art/": "pink",
 "res://Classes/": "gray",
 "res://Data/": "green",
 "res://Data/Abilities/": "red",
 "res://Data/Classes/": "orange",
+"res://Globals/": "purple",
+"res://Nodes/": "orange",
 "res://Scenes/": "red"
 }
 

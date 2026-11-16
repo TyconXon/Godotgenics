@@ -1,0 +1,38 @@
+[gd_resource type="Resource" script_class="PlayerCat" format=3 uid="uid://b1lfe84xidhmd"]
+
+[ext_resource type="Resource" uid="uid://bgl3bqmtgptbs" path="res://Data/Abilities/Basic/Colorless/ShortShot.tres" id="1_54vtt"]
+[ext_resource type="Script" uid="uid://cmbhrasg1j36r" path="res://Classes/AbstractTop/Ability.gd" id="2_3f45c"]
+[ext_resource type="Resource" uid="uid://bik0etxgjyukk" path="res://Data/Classes/Colorless.tres" id="3_86gcn"]
+[ext_resource type="Script" uid="uid://blpxc73clxghv" path="res://Classes/Gon/Status.gd" id="4_6e6ei"]
+[ext_resource type="Script" uid="uid://b6dq56isxdv1a" path="res://Classes/AbstractTop/Item.gd" id="5_bkmtk"]
+[ext_resource type="Texture2D" uid="uid://cgmwcfp73vonr" path="res://Art/Icon/UI_Cat_Icon.svg" id="6_3f45c"]
+[ext_resource type="Script" uid="uid://du84n0v00plm6" path="res://Classes/Mutation.gd" id="7_r1m7w"]
+[ext_resource type="Script" uid="uid://cc6g6ef5mb1l0" path="res://Classes/Gon/Passive.gd" id="8_12neq"]
+[ext_resource type="Script" uid="uid://igr5mococ1f" path="res://Classes/AbstractTop/PassiveAbility.gd" id="9_6ppy3"]
+[ext_resource type="Resource" uid="uid://0ihyq1s6k7y3" path="res://Data/Abilities/Passive/Colorless/ETank.tres" id="10_mnm80"]
+[ext_resource type="Script" uid="uid://c3l3luwwdflr" path="res://Classes/PlayerCat.gd" id="11_b0v87"]
+[ext_resource type="Resource" uid="uid://ct6e3ogx4vdq1" path="res://Data/Abilities/Spells/Colorless/Spit.tres" id="12_yy0oi"]
+
+[sub_resource type="GDScript" id="GDScript_uvu3a"]
+
+[resource]
+script = ExtResource("11_b0v87")
+collar = ExtResource("3_86gcn")
+gender = "Male"
+libido = 0.443
+house_position = null
+stats = Dictionary[int, int]({
+0: 4,
+1: 4,
+2: 7,
+3: 6,
+4: 5,
+5: 4,
+6: 4
+})
+attack_ability = ExtResource("1_54vtt")
+spells = Array[ExtResource("2_3f45c")]([ExtResource("12_yy0oi")])
+passive_abilities = Array[ExtResource("9_6ppy3")]([ExtResource("10_mnm80")])
+name = "Paula"
+graphics = ExtResource("6_3f45c")
+metadata/_custom_type_script = "uid://c3l3luwwdflr"

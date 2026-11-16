@@ -81,33 +81,18 @@ var temporary_round_end_bonus_turns = base_round_end_bonus_turns;
 
 
 # derived variables
-var max_health: int:
-	get:
-		var _d = (volatile_stats(Enums.Stats.constitution) * 4) + flat_max_health;
+func get_max_health():
+		var _d = attributes.get_attribute("max_health", (volatile_stats(Enums.Stats.constitution) * 4));
 		if(_d <= 0 and shield == 0): return 1;
 		return _d;
-	set(value):
-		var _c = value - max_health;
-		flat_max_health += _c;
 var movement: int; #Todo: make this dynamic
 var base_movement: int;
-var base_max_mana: int: 
-	get:
-		return maxi(volatile_stats(Enums.Stats.charisma)*3,0);
-var base_mana_regen: int:
-	get:
-		return maxi(volatile_stats(Enums.Stats.intelligence), 0);
-var flat_mana_regen: int;
-var mana_regen: int:
-	get:
-		return base_mana_regen+flat_mana_regen;
-	set(value):
-		var _c = value - base_mana_regen;
-		flat_mana_regen += _c;
+
+func get_max_mana(): return attributes.get_attribute("max_mana",maxi(volatile_stats(Enums.Stats.charisma)*3,0));
+func get_mana_regen(): return attributes.get_attribute("mana_regen",maxi(volatile_stats(Enums.Stats.intelligence), 0));
 		
 @export var base_initiative := 1;
-var initiative : int : 
-	get: return attributes.get_attribute("initiative",base_initiative) + (volatile_stats(Enums.Stats.speed) * 2) ;
+func get_initiative(): return attributes.get_attribute("initiative", base_initiative + (volatile_stats(Enums.Stats.speed) * 2) );
 	
 # in-combat variables
 var attributes := ModifiersSystem.new();
@@ -115,10 +100,8 @@ var attributes := ModifiersSystem.new();
 func volatile_stats(a:Enums.Stats) -> int :
 	return attributes.get_attribute(Enums.Stats.find_key(a),stats[a]);
 	
-var flat_max_health := 0; 
-var health: int = max_health if initial_health == -1 else initial_health;
+var health: int = get_max_health() if initial_health == -1 else initial_health;
 var mana: int = stats[Enums.Stats.charisma];
-var max_mana:int;
 
 
 

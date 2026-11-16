@@ -13,11 +13,13 @@
 [ext_resource type="Resource" uid="uid://0ihyq1s6k7y3" path="res://Data/Abilities/Passive/Colorless/ETank.tres" id="9_uvu3a"]
 [ext_resource type="Resource" uid="uid://ct6e3ogx4vdq1" path="res://Data/Abilities/Spells/Colorless/Spit.tres" id="11_x8hkq"]
 
-[sub_resource type="GDScript" id="GDScript_x8hkq"]
+[sub_resource type="GDScript" id="GDScript_uvu3a"]
 
 [resource]
 script = ExtResource("7_x8hkq")
 collar = ExtResource("2_rbo7b")
+gender = "Male"
+libido = 0.443
 house_position = null
 stats = Dictionary[int, int]({
 0: 5,
@@ -28,10 +30,9 @@ stats = Dictionary[int, int]({
 5: 6,
 6: 5
 })
-name = "Ness"
-graphics = ExtResource("3_rbo7b")
-is_player_cat = true
 attack_ability = ExtResource("1_67kj2")
 spells = Array[ExtResource("1_3fo36")]([ExtResource("11_x8hkq")])
 passive_abilities = Array[ExtResource("6_uvu3a")]([ExtResource("9_uvu3a")])
+name = "Ness"
+graphics = ExtResource("3_rbo7b")
 metadata/_custom_type_script = "uid://c3l3luwwdflr"
