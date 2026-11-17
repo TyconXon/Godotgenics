@@ -10,8 +10,9 @@ extends Node
 signal perform_trigger(which : Enums.Trigger, context : EffectCallable.EffectContext)
 
 
+#region Engine Entrypoints
 # --- 
-# --- Engine Entrances
+# --- Engine Entrypoints
 # ---
 
 # Called when the node enters the scene tree for the first time.
@@ -23,7 +24,8 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass
-
+#endregion
+#region Proceedures
 # ---
 # --- Proceedures
 # ---
@@ -37,6 +39,8 @@ func timeline_setup():
 
 
 
+#endregion
+#region Helper Methods
 # ---
 # --- Helper Methods
 # ---
@@ -49,3 +53,4 @@ func all_pawns() -> Array[Unit]:
 	
 func all_pawns_from_layer(layer: Enums.Layers) -> Array[Pawn]:
 	return board.layers[layer].data.values();
+#endregion

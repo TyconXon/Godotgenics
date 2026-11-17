@@ -5,7 +5,6 @@
 [ext_resource type="Script" uid="uid://dou8obrytvatv" path="res://Classes/AbstractTop/Battle/BoardLayer.gd" id="2_vr6xi"]
 [ext_resource type="Script" uid="uid://d0jyj80a1c7i1" path="res://Classes/AbstractTop/Units/Character.gd" id="4_c5ef4"]
 [ext_resource type="Resource" uid="uid://cn2aq8kyc55k5" path="res://Data/Testing/Ness.tres" id="5_c5ef4"]
-[ext_resource type="Resource" uid="uid://b1lfe84xidhmd" path="res://Data/Testing/Paula.tres" id="6_8teo4"]
 
 [node name="Battle" type="Node" unique_id=1224411066 node_paths=PackedStringArray("board")]
 script = ExtResource("1_wvl2i")
@@ -22,7 +21,6 @@ metadata/_custom_type_script = "uid://7dhjxupkk1wi"
 [node name="CharacterLayer" type="TileMapLayer" parent="Board" unique_id=845868650]
 script = ExtResource("2_vr6xi")
 initial_data = Dictionary[Vector2i, ExtResource("4_c5ef4")]({
-Vector2i(0, 0): ExtResource("5_c5ef4"),
-Vector2i(4, 0): ExtResource("6_8teo4")
+Vector2i(0, 0): ExtResource("5_c5ef4")
 })
 metadata/_custom_type_script = "uid://dou8obrytvatv"

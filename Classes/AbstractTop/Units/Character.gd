@@ -79,8 +79,11 @@ var temporary_round_end_bonus_turns = base_round_end_bonus_turns;
 @export var bonusturn_pattern: Array[Ability];
 
 
+#region Derived Variables
+# - - - - - - - - - - -
+# - Derived Variables -
+# - - - - - - - - - - -
 
-# derived variables
 func get_max_health():
 		var _d = attributes.get_attribute("max_health", (volatile_stats(Enums.Stats.constitution) * 4));
 		if(_d <= 0 and shield == 0): return 1;
@@ -93,11 +96,11 @@ func get_mana_regen(): return attributes.get_attribute("mana_regen",maxi(volatil
 		
 @export var base_initiative := 1;
 func get_initiative(): return attributes.get_attribute("initiative", base_initiative + (volatile_stats(Enums.Stats.speed) * 2) );
-	
+#endregion
 # in-combat variables
 var attributes := ModifiersSystem.new();
 
-func volatile_stats(a:Enums.Stats) -> int :
+func volatile_stats(a:Enums.Stats) -> float :
 	return attributes.get_attribute(Enums.Stats.find_key(a),stats[a]);
 	
 var health: int = get_max_health() if initial_health == -1 else initial_health;

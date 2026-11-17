@@ -4,6 +4,10 @@ class_name BoardLayer extends TileMapLayer
 var data : Dictionary[Vector2i, Pawn] ## Position to pawn
  
 func _ready() -> void:
+	initialize_pawns();
+	
+
+func initialize_pawns():
 	for i in initial_data:
 		var curchara = Pawn.new()
 		curchara.name = initial_data[i].name + "Pawn"
