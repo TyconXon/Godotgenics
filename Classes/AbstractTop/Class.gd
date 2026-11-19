@@ -6,11 +6,11 @@ extends Resource
 @export var description: String;
 @export_custom(Registry.PROPERTY_HINT_CUSTOM, "res://Data/Abilities/Basic/all_basic_pools.tres") var attack_pool: Array[StringName];
 @export_custom(Registry.PROPERTY_HINT_CUSTOM, "res://Data/Abilities/Spells/all_spell_pools.tres") var ability_pool: Array[StringName];
-@export var starter_abilities: Array[Ability];
-@export var passive_pool: Array[PassiveAbility];
+@export var starter_ability: Ability;
+@export_custom(Registry.PROPERTY_HINT_CUSTOM, "res://Data/Registries/all_passive_pools.tres") var passive_pool: Array[StringName];
 @export var stat_mod: Dictionary[Enums.Stats,int];
 @export var levelup_stat_pool: Array[Enums.Stats];
-@export var innate_passive: Passive; # Should be gonPassive
+@export var innate_passive: Passive;
 @export var innate_items: Array[Item];
 @export_group("Graphics")
 @export var palette: Color;

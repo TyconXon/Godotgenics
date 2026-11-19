@@ -13,7 +13,7 @@ class Injury:
 @export var mutations: Array[Mutation];
 @export_custom(Registry.PROPERTY_HINT_CUSTOM, "res://Data/classes.tres") var levelup_class_pools: Array[StringName]
 
-func get_possible_boons(level:int) -> Array[Resource]: ## Returns all possible level-up offerings. Might return an array of: Passive Abilities, active abilities, duplicate only list (for upgrades), or items
+func get_possible_boons(to_level:int) -> Array[Resource]: ## Returns all possible level-up offerings. Might return an array of: Passive Abilities, active abilities, duplicate only list (for upgrades), or items
 	# TODO: this
 	# First, determine what type of pool this should return from get_boon_pool_type
 	# Second, switch off depending on the pool type
@@ -21,7 +21,7 @@ func get_possible_boons(level:int) -> Array[Resource]: ## Returns all possible l
 	# Third, check for any intercepting hooks, replacing the output with whatever anything wants it to be instead
 	return [];
 
-func get_boon_pool_type(level:int) -> String: ## Returns the type of the pool `get_possible_boons()` is going to return. There's an order cats go in with their pools, figure it out. This function will have interception hooks
+func get_boon_pool_type(to_level:int) -> String: ## Returns the type of the pool `get_possible_boons()` is going to return. There's an order cats go in with their pools, figure it out. This function will have interception hooks
 	return "Passive"
 	
 

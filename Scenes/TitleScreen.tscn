@@ -12,13 +12,13 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 171.00005
-offset_top = 39.0
-offset_right = 270.00006
-offset_bottom = 62.0
+offset_left = 81.0
+offset_top = 36.0
+offset_right = 836.0
+offset_bottom = 224.0
 grow_horizontal = 2
 grow_vertical = 2
-scale = Vector2(7.015464, 7.120491)
+theme_override_font_sizes/font_size = 123
 text = "GodotGenics"
 
 [node name="Button" type="Button" parent="." unique_id=1710733663]

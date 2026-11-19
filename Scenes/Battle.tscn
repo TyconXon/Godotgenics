@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://dbkygfuwj43js" path="res://Classes/AbstractTop/Battle/BattleMananger.gd" id="1_wvl2i"]
 [ext_resource type="Script" uid="uid://7dhjxupkk1wi" path="res://Classes/AbstractTop/Battle/Board.gd" id="2_p46lj"]
+[ext_resource type="Script" uid="uid://dou8obrytvatv" path="res://Classes/AbstractTop/Battle/BoardLayer.gd" id="3_2h7oj"]
 
 [node name="Battle" type="Node" unique_id=1224411066 node_paths=PackedStringArray("board")]
 script = ExtResource("1_wvl2i")
@@ -11,8 +12,11 @@ metadata/_custom_type_script = "uid://dbkygfuwj43js"
 [node name="Board" type="Node2D" parent="." unique_id=1753080817 node_paths=PackedStringArray("layers")]
 script = ExtResource("2_p46lj")
 layers = {
-0: NodePath("")
+0: null
 }
 metadata/_custom_type_script = "uid://7dhjxupkk1wi"
 
-[node name="CharacterLayer" type="Node2D" parent="Board" unique_id=832689187]
+[node name="CharacterLayer" type="Node2D" parent="Board" unique_id=969469279 node_paths=PackedStringArray("spawn_data")]
+script = ExtResource("3_2h7oj")
+spawn_data = [null]
+metadata/_custom_type_script = "uid://dou8obrytvatv"
