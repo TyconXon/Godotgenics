@@ -4,8 +4,8 @@ extends Resource
 
 @export var name: String;
 @export var description: String;
-@export var attack_pool: Array[Ability];
-@export var ability_pool: Array[Ability];
+@export_custom(Registry.PROPERTY_HINT_CUSTOM, "res://Data/Abilities/Basic/all_basic_pools.tres") var attack_pool: Array[StringName];
+@export_custom(Registry.PROPERTY_HINT_CUSTOM, "res://Data/Abilities/Spells/all_spell_pools.tres") var ability_pool: Array[StringName];
 @export var starter_abilities: Array[Ability];
 @export var passive_pool: Array[PassiveAbility];
 @export var stat_mod: Dictionary[Enums.Stats,int];

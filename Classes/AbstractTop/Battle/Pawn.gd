@@ -1,6 +1,9 @@
 class_name Pawn extends Node2D
-@onready var my_board;
-@export var board_position : Vector2; # todo: Get set
+
+@onready var my_board : Board;
+@onready var my_board_layer : BoardLayer;
+
+@export var board_position : Vector2 
 @export var constituent: Unit;
 var graphics_node : Sprite2D;
 

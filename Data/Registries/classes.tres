@@ -6,10 +6,10 @@
 script = ExtResource("1_3rbwn")
 _version = 2
 _scan_rulesets = Array[Dictionary]([{
-&"allowed_file_extensions": Array[String]([]),
+&"allowed_file_extensions": Array[String]([".tres"]),
 &"class_restrictions": Array[StringName]([&"Class"]),
 &"recursive_scan": false,
-&"scan_directories": Array[String]([]),
+&"scan_directories": Array[String](["res://Data/Classes"]),
 &"scan_regex_exclude": "",
 &"scan_regex_include": ""
 }])

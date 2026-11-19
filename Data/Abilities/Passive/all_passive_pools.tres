@@ -1,0 +1,23 @@
+[gd_resource type="Resource" script_class="Registry" format=3 uid="uid://dldmwnekfbo4b"]
+
+[ext_resource type="Script" uid="uid://dqtv77mng5dyh" path="res://addons/yard/registry.gd" id="1_jkfli"]
+
+[resource]
+script = ExtResource("1_jkfli")
+_version = 2
+_scan_rulesets = Array[Dictionary]([{
+&"allowed_file_extensions": Array[String]([]),
+&"class_restrictions": Array[StringName]([&"Registry"]),
+&"recursive_scan": true,
+&"scan_directories": Array[String](["res://Data/Abilities/Passive"]),
+&"scan_regex_exclude": "",
+&"scan_regex_include": ""
+}])
+_uids_to_string_ids = Dictionary[StringName, StringName]({
+&"uid://d02oh7o4yh56f": &"all_colorless_passives",
+&"uid://dldmwnekfbo4b": &"all_passive_pools"
+})
+_string_ids_to_uids = Dictionary[StringName, StringName]({
+&"all_colorless_passives": &"uid://d02oh7o4yh56f",
+&"all_passive_pools": &"uid://dldmwnekfbo4b"
+})

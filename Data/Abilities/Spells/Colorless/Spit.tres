@@ -27,6 +27,7 @@ script = ExtResource("2_tgr2h")
 name = "Spit"
 description = "Spit attack with infinite range that deals 1 damage."
 ability_icon = ExtResource("1_tgr2h")
+type = "Ranged"
 upgraded_version = SubResource("Resource_0deef")
 mana_cost = 4
 target_mode = "tile"

@@ -62,7 +62,7 @@ var temporary_round_end_bonus_turns = base_round_end_bonus_turns;
 @export var current_statuses : Array[Status]
 
 @export_group("Character abilities")
-@export var move_ability: Ability; ## If none, default
+@export_custom(Registry.PROPERTY_HINT_CUSTOM, "res://Data/Registries/abilities.tres") var move_ability: StringName; ## If none, default
 @export var attack_ability: Ability;
 @export var spells: Array[Ability];
 @export var passive_abilities: Array[PassiveAbility];
