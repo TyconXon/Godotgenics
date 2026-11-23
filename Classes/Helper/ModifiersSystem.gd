@@ -33,8 +33,8 @@ func clear_source(source: String):
 			data.erase(a)
 
 class Modifier:
-	var from : String ## A string representing where this is from
-	var to : String ## Important: A string representing the attribute to modify
+	var from : StringName ## A string representing where this is from
+	var to : StringName ## Important: A string representing the attribute to modify
 	var val : float ## Value to modify it by
 	enum operations {Add, MultiplyBase, MultiplyAfter}
 	var opp : operations;

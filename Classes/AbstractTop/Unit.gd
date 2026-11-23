@@ -2,7 +2,7 @@ class_name Unit extends Resource ## Top-level unit class, encompassing character
 
 @export var name : String;
 @export var description: String;
-@export var tags : Array[String];
+@export var tags : Array[StringName];
 @export var graphics : Texture2D;
 @export var visual_scale := Vector2.ONE;
 @export var tile_size := Vector2.ONE;

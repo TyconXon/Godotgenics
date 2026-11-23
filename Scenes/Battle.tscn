@@ -3,6 +3,9 @@
 [ext_resource type="Script" uid="uid://dbkygfuwj43js" path="res://Classes/AbstractTop/Battle/BattleMananger.gd" id="1_wvl2i"]
 [ext_resource type="Script" uid="uid://7dhjxupkk1wi" path="res://Classes/AbstractTop/Battle/Board.gd" id="2_p46lj"]
 [ext_resource type="Script" uid="uid://dou8obrytvatv" path="res://Classes/AbstractTop/Battle/BoardLayer.gd" id="3_2h7oj"]
+[ext_resource type="Script" uid="uid://cu24x3w2svh4x" path="res://Classes/AbstractTop/Battle/Spawnpoint.gd" id="4_1samx"]
+[ext_resource type="Resource" uid="uid://cn2aq8kyc55k5" path="res://Data/Testing/Ness.tres" id="5_p46lj"]
+[ext_resource type="Resource" uid="uid://b1lfe84xidhmd" path="res://Data/Testing/Paula.tres" id="6_8teo4"]
 
 [node name="Battle" type="Node" unique_id=1224411066 node_paths=PackedStringArray("board")]
 script = ExtResource("1_wvl2i")
@@ -10,13 +13,30 @@ board = NodePath("Board")
 metadata/_custom_type_script = "uid://dbkygfuwj43js"
 
 [node name="Board" type="Node2D" parent="." unique_id=1753080817 node_paths=PackedStringArray("layers")]
+position = Vector2(375, 75)
 script = ExtResource("2_p46lj")
 layers = {
-0: null
+0: NodePath("CharacterLayer")
 }
 metadata/_custom_type_script = "uid://7dhjxupkk1wi"
 
-[node name="CharacterLayer" type="Node2D" parent="Board" unique_id=969469279 node_paths=PackedStringArray("spawn_data")]
+[node name="CharacterLayer" type="Node2D" parent="Board" unique_id=969469279]
 script = ExtResource("3_2h7oj")
-spawn_data = [null]
 metadata/_custom_type_script = "uid://dou8obrytvatv"
+
+[node name="Spawnpoint" type="Sprite2D" parent="Board/CharacterLayer" unique_id=277542424]
+position = Vector2(12, 7)
+script = ExtResource("4_1samx")
+spawn = ExtResource("6_8teo4")
+board_position = Vector2(4, 0)
+metadata/_custom_type_script = "uid://cu24x3w2svh4x"
+
+[node name="Spawnpoint2" type="Sprite2D" parent="Board/CharacterLayer" unique_id=649119562]
+position = Vector2(29, 22)
+offset = Vector2(-29, -22)
+script = ExtResource("4_1samx")
+spawn = ExtResource("5_p46lj")
+metadata/_custom_type_script = "uid://cu24x3w2svh4x"
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=305197505]
+anchor_mode = 0

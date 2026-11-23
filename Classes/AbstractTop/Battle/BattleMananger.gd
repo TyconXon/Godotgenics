@@ -48,9 +48,9 @@ func timeline_setup():
 func all_pawns() -> Array[Unit]:
 	var culmination: Array = [];
 	for layer:BoardLayer in board.layers.values():
-		culmination.append_array(layer.data.values())
+		culmination.append_array(layer.data)
 	return culmination;
 	
 func all_pawns_from_layer(layer: Enums.Layers) -> Array[Pawn]:
-	return board.layers[layer].data.values();
+	return board.layers[layer].data;
 #endregion

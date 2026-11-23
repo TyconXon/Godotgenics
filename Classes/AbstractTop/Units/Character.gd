@@ -23,7 +23,7 @@ var display_name : String :
 
 
 @export_group("Properties")
-@export var tag: Array[String];
+@export var tag: Array[StringName];
 @export var equipped_items: Dictionary[Enums.ItemSlots, Item];
 @export var movement_stacks: int = 1 ##How many times this character can use up its movement ability
 @export var basic_stacks: int = 1 ##How many times this character can use up the act slot

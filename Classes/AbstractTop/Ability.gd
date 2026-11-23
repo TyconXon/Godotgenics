@@ -4,7 +4,7 @@ extends Resource
 
 @export var name: String;
 @export_multiline var description: String;
-@export var tags: Array[String];
+@export var tags: Array[StringName];
 @export var chain_ability: Ability;
 
 @export_group("Meta")
@@ -44,7 +44,7 @@ var cant_cast: Callable;
 @export var delayed_trigger: bool; ## If the ability is casted next turn
 @export var aoe_restrictions: Array[Enums.AOERestrictions];
 @export var restrictions: Array[Enums.Restrictions];
-@export var target_requires_tag: Array[String];
+@export var target_requires_tag: Array[StringName];
 @export var target_requires_element: Array[Enums.Elements];
 @export var comparison: Dictionary[Enums.XIs, Enums.Comparisons];
 @export var line_of_sight := true;
