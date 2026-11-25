@@ -1,3 +1,4 @@
+@tool
 class_name BoardLayer extends Node2D
 @export var type : Enums.Layers;
 @export_storage var spawn_data : Array[Spawnpoint] ## Auto-gen the boardlayer
@@ -5,6 +6,8 @@ class_name BoardLayer extends Node2D
 var data : Array[Pawn]
  
 func _ready() -> void:
+	if Engine.is_editor_hint():
+		return;
 	spawn_data.append_array(get_children().filter(func(a):return a is Spawnpoint));
 	initialize_pawns();
 	

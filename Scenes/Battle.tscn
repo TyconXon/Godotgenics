@@ -4,8 +4,10 @@
 [ext_resource type="Script" uid="uid://7dhjxupkk1wi" path="res://Classes/AbstractTop/Battle/Board.gd" id="2_p46lj"]
 [ext_resource type="Script" uid="uid://dou8obrytvatv" path="res://Classes/AbstractTop/Battle/BoardLayer.gd" id="3_2h7oj"]
 [ext_resource type="Script" uid="uid://cu24x3w2svh4x" path="res://Classes/AbstractTop/Battle/Spawnpoint.gd" id="4_1samx"]
+[ext_resource type="Texture2D" uid="uid://cgmwcfp73vonr" path="res://Art/Icon/UI_Cat_Icon.svg" id="4_u22qb"]
 [ext_resource type="Resource" uid="uid://cn2aq8kyc55k5" path="res://Data/Testing/Ness.tres" id="5_p46lj"]
 [ext_resource type="Resource" uid="uid://b1lfe84xidhmd" path="res://Data/Testing/Paula.tres" id="6_8teo4"]
+[ext_resource type="Texture2D" uid="uid://samqidq4fbp5" path="res://icon.svg" id="7_6yjxy"]
 
 [node name="Battle" type="Node" unique_id=1224411066 node_paths=PackedStringArray("board")]
 script = ExtResource("1_wvl2i")
@@ -25,17 +27,21 @@ script = ExtResource("3_2h7oj")
 metadata/_custom_type_script = "uid://dou8obrytvatv"
 
 [node name="Spawnpoint" type="Sprite2D" parent="Board/CharacterLayer" unique_id=277542424]
-position = Vector2(12, 7)
+position = Vector2(125, 125)
+scale = Vector2(0.64102566, 0.6944444)
+texture = ExtResource("4_u22qb")
 script = ExtResource("4_1samx")
 spawn = ExtResource("6_8teo4")
-board_position = Vector2(4, 0)
+board_position = Vector2i(2, 2)
 metadata/_custom_type_script = "uid://cu24x3w2svh4x"
 
 [node name="Spawnpoint2" type="Sprite2D" parent="Board/CharacterLayer" unique_id=649119562]
-position = Vector2(29, 22)
-offset = Vector2(-29, -22)
+position = Vector2(375, 175)
+scale = Vector2(0.390625, 0.390625)
+texture = ExtResource("7_6yjxy")
 script = ExtResource("4_1samx")
 spawn = ExtResource("5_p46lj")
+board_position = Vector2i(7, 3)
 metadata/_custom_type_script = "uid://cu24x3w2svh4x"
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=305197505]
